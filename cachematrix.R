@@ -14,11 +14,14 @@
 ## 4.getinv() - This gets the inverse value from the function.
 
 makeCacheMatrix <- function(x = matrix()) {
+    
     inverse <- NULL
+    
     set <- function(y = matrix()) {
         x <<- y
         inverse <<- NULL
     }
+    
     get <- function() {
         x
     }
@@ -40,11 +43,13 @@ makeCacheMatrix <- function(x = matrix()) {
             x <<- NULL
         }
               
-    }    
+    }
+    
     getinv <- function() {
         inverse
     }
-    list(set = set, get = get,setinv = setinv,getinv = getinv)
+    
+list(set = set, get = get,setinv = setinv,getinv = getinv)
 }
 
 
